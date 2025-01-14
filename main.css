@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+label, select, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 16px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4CAF50;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: red;
+}
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+.hidden {
+    display: none;
+}
